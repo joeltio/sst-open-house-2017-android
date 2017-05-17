@@ -1,0 +1,67 @@
+# Adapted from https://www.gitignore.io/api/androidstudio
+
+# Built application files
+*.apk
+*.ap_
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle
+.gradle/
+build/
+
+# Signing files
+.signing/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log Files
+*.log
+
+# Android Studio
+*~
+*.swp
+
+# User-specific configurations
+/SSTOpenHouse2017/.idea/libraries/
+/SSTOpenHouse2017/.idea/workspace.xml
+/SSTOpenHouse2017/.idea/tasks.xml
+/SSTOpenHouse2017/.idea/.name
+/SSTOpenHouse2017/.idea/compiler.xml
+/SSTOpenHouse2017/.idea/copyright/profiles_settings.xml
+/SSTOpenHouse2017/.idea/encodings.xml
+/SSTOpenHouse2017/.idea/misc.xml
+/SSTOpenHouse2017/.idea/modules.xml
+/SSTOpenHouse2017/.idea/scopes/scope_settings.xml
+/SSTOpenHouse2017/.idea/dictionaries
+/SSTOpenHouse2017/.idea/vcs.xml
+/SSTOpenHouse2017/.idea/jsLibraryMappings.xml
+/SSTOpenHouse2017/.idea/datasources.xml
+/SSTOpenHouse2017/.idea/dataSources.ids
+/SSTOpenHouse2017/.idea/sqlDataSources.xml
+/SSTOpenHouse2017/.idea/dynamic.xml
+/SSTOpenHouse2017/.idea/uiDesigner.xml
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+!/gradle/wrapper/gradle-wrapper.jar
