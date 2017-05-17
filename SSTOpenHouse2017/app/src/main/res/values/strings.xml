@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SST Open House 2017</string>
     <string name="action_settings">Settings</string>
+
+    <!-- URLs -->
+    <string name="registration_form_url"></string>
 </resources>
