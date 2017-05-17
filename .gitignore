@@ -64,4 +64,4 @@ Thumbs.db
 *.war
 *.ear
 
-!/gradle/wrapper/gradle-wrapper.jar
+!/SSTOpenHouse2017/gradle/wrapper/gradle-wrapper.jar
