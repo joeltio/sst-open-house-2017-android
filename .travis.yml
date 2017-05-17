@@ -1,0 +1,23 @@
+notifications:
+    email: false
+language: android
+jdk:
+    - oraclejdk8
+android:
+    components:
+        - tools
+        - build-tools-25.0.0
+        - android-25
+        - extra-android-m2repository
+before_cache:
+    - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+    - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+    directories:
+        - $HOME/.gradle/caches/
+        - $HOME/.gradle/wrapper/
+        - $HOME/.android/build-cache
+
+script:
+    - cd SSTOpenHouse2017
+    - ./gradlew assembleDebug
