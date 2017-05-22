@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "103296010865",
+    "firebase_url": "https://open-house-2017.firebaseio.com",
+    "project_id": "open-house-2017",
+    "storage_bucket": "open-house-2017.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103296010865:android:79733b9b544bc29b",
+        "android_client_info": {
+          "package_name": "com.sst.sstopenhouse2017"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103296010865-6bro5p3u0drqgr0so4bbhckuf4341qdq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sst.sstopenhouse2017",
+            "certificate_hash": "4dfdaa23af11aae20388fea7c49f0240bc9d2872"
+          }
+        },
+        {
+          "client_id": "103296010865-rvo1b6fudc70u208t4dqb5oc8ijlepge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgQPBaAs7U4BErEquWfSW2SI5XtDJDc14"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103296010865-quigk52cf03rvoij0oaikmqra7bll19u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.robinvvinod.openhouse"
+              }
+            },
+            {
+              "client_id": "103296010865-rvo1b6fudc70u208t4dqb5oc8ijlepge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
