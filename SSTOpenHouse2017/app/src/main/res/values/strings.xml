@@ -16,4 +16,12 @@
     <string name="redemption_prize_C">10 codes - Prize C</string>
 
     <string name="redemption_button">REDEEM</string>
+    <!-- Redemption dialog -->
+    <string name="redemption_dialog_header">Redeem</string>
+    <string name="redemption_dialog_description">Enter the 4 digit booth code</string>
+    <!-- Redemption error dialog -->
+    <string name="redemption_dialog_error_header">Error</string>
+    <string name="redemption_dialog_error_invalid_code">The redemption code is invalid. Please make sure that the code is 4 characters long.</string>
+    <string name="redemption_dialog_error_no_such_code">The redemption code is incorrect.</string>
+    <string name="redemption_dialog_error_code_redeemed">You have already redeemed this code.</string>
 </resources>
