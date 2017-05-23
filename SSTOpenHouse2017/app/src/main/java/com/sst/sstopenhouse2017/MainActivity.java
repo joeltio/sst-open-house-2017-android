@@ -1,49 +1,50 @@
 package com.sst.sstopenhouse2017;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
+import com.sst.sstopenhouse2017.fragments.HomeFragment;
+import com.sst.sstopenhouse2017.fragments.RedemptionFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton redeemFab = (FloatingActionButton) findViewById(R.id.redeem_fab);
-        redeemFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), RedemptionActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        WebView mainWebView = (WebView) findViewById(R.id.main_webView);
-        // TODO: Set the webpage to view
-        String webpage = "";
-        mainWebView.loadData(webpage, "text/html; charset=utf-8", "utf-8");
+        this.bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        bottomNavigationView.setSelectedItemId(R.id.navigation_home);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // TODO: fill up menu with items
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.navigation_redemption) {
+            Fragment redemptionFragment = new RedemptionFragment();
+            getSupportFragmentManager().beginTransaction().replace(
+                    R.id.main_content_layout, redemptionFragment
+            ).commit();
+        } else if (id == R.id.navigation_home) {
+            Fragment homeFragment = new HomeFragment();
+            getSupportFragmentManager().beginTransaction().replace(
+                    R.id.main_content_layout, homeFragment
+            ).commit();
+        } else if (id == R.id.navigation_website) {
+
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.sst.edu.sg/"));
+            startActivity(intent);
+            bottomNavigationView.setSelectedItemId(R.id.navigation_home);
+            bottomNavigationView.getMenu().getItem(1).setChecked(true);
+        }
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // TODO: Setup item on item selected
-        return super.onOptionsItemSelected(item);
     }
 }

@@ -24,4 +24,9 @@
     <string name="redemption_dialog_error_invalid_code">The redemption code is invalid. Please make sure that the code is 4 characters long.</string>
     <string name="redemption_dialog_error_no_such_code">The redemption code is incorrect.</string>
     <string name="redemption_dialog_error_code_redeemed">You have already redeemed this code.</string>
+
+    <!-- Bottom Navigation -->
+    <string name="title_home">Home</string>
+    <string name="title_redemption">Redemption</string>
+    <string name="title_website">Website</string>
 </resources>
