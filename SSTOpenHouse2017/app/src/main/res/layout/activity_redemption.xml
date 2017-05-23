@@ -1,8 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.sst.sstopenhouse2017.RedemptionActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/redemption_header"
+            android:layout_marginTop="@dimen/redemption_text_size_medium"
+            android:layout_marginBottom="@dimen/redemption_text_size_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryFontDark"
+            android:textSize="@dimen/redemption_text_size_medium"
+            android:textStyle="italic"
+            android:text="@string/redemption_header" />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/redemption_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/redemption_header"
+            android:textSize="@dimen/redemption_text_size_small"
+            android:text="@string/redemption_description" />
+
+        <TextView
+            android:id="@+id/redemption_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/redemption_description"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryFontDark"
+            android:textSize="@dimen/redemption_text_size_large" />
+
+        <LinearLayout
+            android:id="@+id/prize_list"
+            android:background="#dbdbdbdb"
+            android:orientation="vertical"
+            android:padding="@dimen/redemption_text_size_small"
+            android:layout_marginTop="@dimen/redemption_text_size_small"
+            android:layout_alignStart="@id/redemption_description"
+            android:layout_alignEnd="@+id/redemption_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/redemption_count"
+            android:layout_centerVertical="true" >
+            <TextView
+                android:paddingBottom="@dimen/redemption_text_size_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="@dimen/redemption_text_size_small"
+                android:textColor="@color/colorPrimaryFontDark"
+                android:text="@string/redemption_prize_header"/>
+            <TextView
+                android:paddingBottom="@dimen/redemption_text_size_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/redemption_text_size_small"
+                android:textAlignment="center"
+                android:text="@string/redemption_prize_A" />
+            <TextView
+                android:paddingBottom="@dimen/redemption_text_size_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/redemption_text_size_small"
+                android:textAlignment="center"
+                android:text="@string/redemption_prize_B" />
+            <TextView
+                android:paddingBottom="@dimen/redemption_text_size_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/redemption_text_size_small"
+                android:textAlignment="center"
+                android:text="@string/redemption_prize_C" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/redemption_text_size_small"
+            android:layout_alignStart="@id/redemption_description"
+            android:layout_alignEnd="@id/redemption_description"
+            android:layout_below="@id/prize_list"
+            android:textSize="@dimen/redemption_text_size_small"
+            android:text="@string/redemption_button"/>
+    </RelativeLayout>
+</ScrollView>

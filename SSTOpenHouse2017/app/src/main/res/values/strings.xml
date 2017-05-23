@@ -4,4 +4,16 @@
 
     <!-- URLs -->
     <string name="registration_form_url"></string>
+
+    <!-- Redemption -->
+    <string name="redemption_header">Redemption</string>
+    <string name="redemption_description">Number of codes redeemed:</string>
+
+    <string name="redemption_prize_header">Prize List</string>
+    <!-- TODO: Change the prizes -->
+    <string name="redemption_prize_A">3 codes - Prize A</string>
+    <string name="redemption_prize_B">7 codes - Prize B</string>
+    <string name="redemption_prize_C">10 codes - Prize C</string>
+
+    <string name="redemption_button">REDEEM</string>
 </resources>
