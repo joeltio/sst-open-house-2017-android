@@ -15,8 +15,8 @@ const images = {
     dsaExercise: {
         name: "dsa_exercise",
         source: require("../resources/img/dsa_exercise.jpg"),
-        height: 3456,
-        width: 5184
+        height: 1000,
+        width: 1500
     },
     gettingStarted: {
         name: "getting_started",
@@ -33,8 +33,8 @@ const images = {
     principalTalks: {
         name: "principal_talks",
         source: require("../resources/img/principal_talks.jpg"),
-        height: 3631,
-        width: 9362
+        height: 1000,
+        width: 2578
     },
     sstLogo: {
         name: "sst_logo",
@@ -42,17 +42,38 @@ const images = {
         height: 389,
         width: 395
     },
-    sstedTalks: {
+    ssTedTalks: {
         name: "ssted_talks",
         source: require("../resources/img/ssted_talks.jpg"),
-        height: 2848,
-        width: 4272
+        height: 1000,
+        width: 1500
     },
     studentPanel: {
         name: "student_panel",
         source: require("../resources/img/student_panel.jpg"),
         height: 1537,
         width: 2305
+    },
+
+    map: {
+        floor1: {
+            name: "floor1",
+            source: require("../resources/img/maps/f1.png"),
+            height: 1194,
+            width: 598
+        },
+        floor2: {
+            name: "floor2",
+            source: require("../resources/img/maps/f2.png"),
+            height: 1138,
+            width: 546
+        },
+        floor3up: {
+            name: "floor3up",
+            source: require("../resources/img/maps/f3.png"),
+            height: 1151,
+            width: 566
+        }
     }
 }
 

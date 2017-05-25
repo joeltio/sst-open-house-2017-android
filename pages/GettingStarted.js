@@ -6,7 +6,6 @@ import LongButton from "../components/LongButton";
 import defaultStyles from "../stores/styleStore";
 import { strings, colors } from "../stores/gettingStartedStore";
 
-var screenWidth
 export default class GettingStarted extends React.Component {
     static navigationOptions = {
         title: "Getting Started"
@@ -19,7 +18,7 @@ export default class GettingStarted extends React.Component {
             [strings.shortDuration, colors.shortDuration],
             [strings.mediumDuration, colors.mediumDuration],
             [strings.longDuration, colors.longDuration]
-        ].map((e, i) => <LongButton key={i} width={screenWidth} text={e[0]} buttonColor={e[1]} />)
+        ].map((e, i) => <LongButton key={i} onPress={() => navigate("Recommended", {duration: e[0]})} width={screenWidth} text={e[0]} buttonColor={e[1]} />)
 
         return (
             <View style={styles.gettingStarted}>
