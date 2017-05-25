@@ -2,7 +2,9 @@ import React from "react";
 import { Dimensions, View, Button, Text, StyleSheet } from "react-native";
 
 import LongButton from "../components/LongButton";
+
 import defaultStyles from "../stores/styleStore";
+import { strings, colors } from "../stores/gettingStartedStore";
 
 var screenWidth
 export default class GettingStarted extends React.Component {
@@ -14,15 +16,15 @@ export default class GettingStarted extends React.Component {
         const screenWidth = Dimensions.get("window").width;
 
         const durations = [
-            ["0 - 1h", "rgb(189, 188, 189)"],
-            ["1 - 2h", "rgb(145, 145, 146)"],
-            ["2 - 3h", "rgb(94, 94, 95)"]
+            [strings.shortDuration, colors.shortDuration],
+            [strings.mediumDuration, colors.mediumDuration],
+            [strings.longDuration, colors.longDuration]
         ].map((e, i) => <LongButton key={i} width={screenWidth} text={e[0]} buttonColor={e[1]} />)
 
         return (
             <View style={styles.gettingStarted}>
-                <Text style={defaultStyles.header}>Welcome.</Text>
-                <Text style={defaultStyles.description}>To get you started, please input the duration of your stay.</Text>
+                <Text style={defaultStyles.header}>{strings.header}</Text>
+                <Text style={defaultStyles.description}>{strings.description}</Text>
 
                 <View style={styles.durations}>
                     {durations}
