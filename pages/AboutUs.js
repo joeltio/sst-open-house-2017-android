@@ -2,7 +2,9 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 import ImageBar from "../components/ImageBar";
+
 import defaultStyles from "../stores/styleStore";
+import strings from "../stores/aboutUsStore"
 
 export default class AboutUs extends React.Component {
     static navigationOptions = {
@@ -11,8 +13,8 @@ export default class AboutUs extends React.Component {
     render() {
         return (
             <View style={styles.aboutUs}>
-                <Text style={defaultStyles.header}>About Us.</Text>
-                <Text style={defaultStyles.description}>The School of Science and Technology, Singapore (SST) is a Specialised Independent School that offers a distinctive 4-year GCE O-Level programme with an integrated approach to applied learning.</Text>
+                <Text style={defaultStyles.header}>{strings.header}</Text>
+                <Text style={defaultStyles.description}>{strings.description}</Text>
             </View>
         )
     }
