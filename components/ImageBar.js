@@ -1,6 +1,8 @@
 import React from "react";
 import { Dimensions, Image, View, Text, StyleSheet } from "react-native";
 
+import FitImage from "./FitImage";
+
 import TouchableWithoutFeedback from 'TouchableWithoutFeedback';
 
 import resolveAssetSource from 'resolveAssetSource';
@@ -27,27 +29,12 @@ export default class ImageBar extends React.Component {
     }
 
     render() {
-        const aspectRatio = this.imageHeight/this.imageWidth;
-
-        const newWidth = Dimensions.get("window").width;
-        const newHeight = Math.floor(newWidth * aspectRatio);
-        
-        var backgroundImageStyle = {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: newWidth,
-            height: newHeight
-        }
         return (
             <TouchableWithoutFeedback onPress={this.props.onPress}>
                 <View style={styles.imageBar}>
-                    <Image
-                        source={this.imageSource}
-                        resizeMode="contain"
-                        style={backgroundImageStyle}>
-                            <Text style={styles.innerText}>{this.props.text}</Text>
-                    </Image>
+                    <FitImage image={this.props.image}>
+                        <Text style={styles.innerText}>{this.props.text}</Text>
+                    </FitImage>
                 </View>
             </TouchableWithoutFeedback>
         );
