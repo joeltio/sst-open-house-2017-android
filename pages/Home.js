@@ -3,6 +3,8 @@ import { Linking, View, ScrollView, Button, Text, StyleSheet } from "react-nativ
 
 import ImageBar from "../components/ImageBar";
 
+import images from "../stores/imageStore";
+
 export default class Home extends React.Component {
     static navigationOptions = {
         title: "Home"
@@ -18,23 +20,20 @@ export default class Home extends React.Component {
         const homeBars = [
             [
                 "Getting Started",
-                require("../resources/img/getting_started.jpg"),
-                {width:1594, height:811},
+                images.gettingStarted,
                 () => navigate("GettingStarted")
             ],
             [
                 "About Us",
-                require("../resources/img/about_us.jpg"),
-                {width: 2426, height:1671},
+                images.aboutUs,
                 () => navigate("AboutUs")
             ],
             [
                 "Curriculum",
-                require("../resources/img/curriculum.jpg"),
-                {width: 3472, height:2315 },
+                images.curriculum,
                 this.goToCurriculum
             ]
-        ].map((e, i) => <ImageBar key={i} text={e[0]} src={e[1]} dimen={e[2]} press={e[3]} />);
+        ].map((e, i) => <ImageBar key={i} text={e[0]} image={e[1]} onPress={e[2]} />);
 
         return (
             <View style={styles.home}>
