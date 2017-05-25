@@ -20,7 +20,7 @@ export default class LongButton extends React.Component {
             fontSize: 40
         }
         return (
-            <TouchableWithoutFeedback onPress={this.props.press}>
+            <TouchableWithoutFeedback onPress={this.props.onPress}>
                 <View style={buttonStyle}>
                     <Text style={textStyle}>{this.props.text}</Text>
                 </View>
