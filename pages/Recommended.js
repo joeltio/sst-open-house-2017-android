@@ -79,7 +79,7 @@ export default class Recommended extends React.Component {
                 images.handsOnSessions,
                 descriptions.handsOnSessions,
                 locations.handsOnSessions,
-                images.map.floor2up
+                images.map.floor2
             ],
             [
                 strings.ssTedTalks,
