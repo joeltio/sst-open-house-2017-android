@@ -16,7 +16,6 @@ export default class ActivityInfo extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <ScrollView style={styles.activityInfo}>
                 {this.imageBar}
