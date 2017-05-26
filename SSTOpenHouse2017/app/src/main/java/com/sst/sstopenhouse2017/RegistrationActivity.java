@@ -27,8 +27,6 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        finishActivity();
-
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean formCompleted = preferences.getBoolean(PREFERENCE_FORM_COMPLETED, false);
 
