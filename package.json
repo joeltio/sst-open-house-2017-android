@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-release": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output index.android.bundle --assets-dest SSTOpenHouse2017/app/src/main/res/",
+    "build-release": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output SSTOpenHouse2017/app/src/main/assets/index.android.bundle --assets-dest SSTOpenHouse2017/app/src/main/res/",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.0.0-alpha.6",
-    "react-native": "^0.44.0",
-    "react-navigation": "^1.0.0-beta.11"
+    "react-native": "0.44.0",
+    "react-navigation": "1.0.0-beta.11"
   }
 }
